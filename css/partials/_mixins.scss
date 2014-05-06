@@ -1,0 +1,27 @@
+// Mixins
+
+@mixin aa-text {
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin no-aa-text {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+@mixin hide-text {
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@mixin clearfix {
+	display: block;
+	&::after {
+	  visibility: hidden;
+	  display: block;
+	  font-size: 0;
+	  content: " ";
+	  clear: both;
+	  height: 0;
+	}
+}

@@ -1,0 +1,101 @@
+// Base Styles
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  overflow-x:hidden;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  width: 100%;
+  height: 100%;
+  font-family: $sans;
+  -webkit-tap-highlight-color: black;
+  background: white;
+  color: black;
+}
+
+::selection {
+  background: #777;
+  color: white;
+}
+
+::-moz-selection {
+  background: #777;
+  color: white;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.clearfix {
+  display: block;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+strong {
+  font-weight: $bold;
+  font-family: $sans;
+  @include aa-text;
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.center {
+  text-align: center;
+}
+
+.noborder {
+  border: 0 !important;
+}
+
+.hide-text {
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.avatar {
+  display: block;
+  border-radius: 100%;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 0 0 1rem;
+}

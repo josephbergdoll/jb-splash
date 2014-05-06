@@ -1,0 +1,37 @@
+h1,h2,h3,h4,h5 {
+  font-family: $sans;
+}
+
+h1 {
+
+}
+
+h2 {
+  font-weight: $book;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  @include aa-text;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-weight: $light;
+  color: $gray-lighter;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+}
+
+// Animations
+
+@include keyframes(meta-animate) {
+  0% {
+    @include transform(translateY(0));
+  }
+  50% {
+    @include transform(translateX(4px) translateY(4px));
+  }
+  100% {
+    @include transform(translateX(0) translateY(0));
+  }
+}
