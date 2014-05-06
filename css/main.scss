@@ -68,11 +68,6 @@ header, section, footer {
 
 .logo {
   display: block;
-  width: 30rem;
-  height: 4rem;
-  background: url(../img/jb_w.svg) no-repeat top left;
-  background-size: 100%;
-  @include hide-text;
 }
 
 // Project Grid

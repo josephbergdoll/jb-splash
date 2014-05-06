@@ -202,7 +202,7 @@ a {
   margin: 0 0 1rem; }
 
 body {
-  background: #dddddd; }
+  background: #dedede; }
 
 header, section, footer {
   width: 100%;
@@ -290,14 +290,7 @@ header, section, footer {
     letter-spacing: 0.1em; }
 
 .logo {
-  display: block;
-  width: 30rem;
-  height: 4rem;
-  background: url(../img/jb_w.svg) no-repeat top left;
-  background-size: 100%;
-  text-indent: 120%;
-  white-space: nowrap;
-  overflow: hidden; }
+  display: block; }
 
 .project-grid .wrapper {
   padding: 1rem 0.5rem;
