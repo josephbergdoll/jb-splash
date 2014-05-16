@@ -64,13 +64,35 @@ table {
 h1, h2, h3, h4, h5 {
   font-family: "Circular Std", "Helvetica Neue", Arial, Helvetica, sans-serif; }
 
+h1 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  -webkit-font-smoothing: antialiased; }
+
 h2 {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin: 0.75rem 0 0.25rem;
   font-size: 0.625rem;
-  color: #ff7d00; }
+  color: black; }
+
+p {
+  color: rgba(0, 0, 0, 0.35);
+  font-size: 1.5rem; }
+
+a {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: 250ms color ease-out;
+  -moz-transition: 250ms color ease-out;
+  transition: 250ms color ease-out; }
+  a:hover {
+    color: rgba(249, 249, 249, 0.55);
+    -webkit-transition: 100ms color ease-out;
+    -moz-transition: 100ms color ease-out;
+    transition: 100ms color ease-out; }
 
 @-webkit-keyframes meta-animate {
   0% {
@@ -154,53 +176,19 @@ img {
   max-width: 100%;
   height: auto; }
 
-.clearfix {
-  display: block; }
-
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0; }
-
-strong {
-  font-weight: 700;
-  font-family: "Circular Std", "Helvetica Neue", Arial, Helvetica, sans-serif; }
-
-em {
-  font-style: italic; }
-
-a {
-  text-decoration: none;
-  color: black; }
-
-.center {
-  text-align: center; }
-
-.noborder {
-  border: 0 !important; }
-
-.hide-text {
-  text-indent: 120%;
-  white-space: nowrap;
-  overflow: hidden; }
-
-.avatar {
-  display: block;
-  border-radius: 100%;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin: 0 0 1rem; }
-
-body {
-  background: url(../img/nyc.jpg) center center no-repeat;
-  background-size: cover; }
-
 header, section, footer {
   width: 100%;
   height: auto; }
+
+body {
+  display: block; }
+  body::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0; }
 
 .wrapper {
   display: block;
@@ -249,125 +237,43 @@ header, section, footer {
   .block-fifth:last-child {
     margin-right: 0; }
 
-.header {
-  background: white; }
-
-.info-contain {
-  width: 100%;
+.masthead-contain {
   height: 100%;
-  background: transparent;
-  padding: 2rem; }
-
-.info {
-  background: #eeeeee;
-  height: 100%;
+  background: url(https://farm8.staticflickr.com/7355/12736608893_4c8bb08abb_o.jpg) no-repeat center center;
+  background-size: cover;
   padding: 1rem; }
 
 .logo {
+  width: 100%;
+  height: auto;
   display: block; }
-
-.project-grid .wrapper {
-  padding: 1rem 0.5rem;
-  max-width: 100%; }
-
-.project-grid-contain {
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-  column-count: 2;
-  -webkit-column-gap: 0.5rem;
-  -moz-column-gap: 0.5rem;
-  column-gap: 0.5rem;
-  display: block; }
-  .project-grid-contain::after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
+  .logo img {
+    width: 100%;
+    height: auto; }
+  .logo:after {
     content: " ";
-    clear: both;
-    height: 0; }
+    display: block;
+    width: 7.333%;
+    background: #ff7d00;
+    height: 2px;
+    margin-bottom: 1.25%; }
 
-.project-thumb {
-  display: inline-block;
-  margin-bottom: 0.25rem;
-  overflow: hidden;
-  position: relative;
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  box-shadow: 0px 0px 0px black;
-  -webkit-transition: 200ms all ease-out;
-  -moz-transition: 200ms all ease-out;
-  transition: 200ms all ease-out; }
-  .project-thumb img {
-    display: block;
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden; }
-  .project-thumb .project-thumb-meta {
-    display: block;
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    -webkit-transform: translateX(-110%);
-    -moz-transform: translateX(-110%);
-    -ms-transform: translateX(-110%);
-    -o-transform: translateX(-110%);
-    transform: translateX(-110%);
-    -webkit-transition: 100ms all ease-out;
-    -moz-transition: 100ms all ease-out;
-    transition: 100ms all ease-out; }
-    .project-thumb .project-thumb-meta h2, .project-thumb .project-thumb-meta h3 {
-      background: #f9f9f9;
-      display: table;
-      padding: 0.25rem; }
-  .project-thumb:hover {
-    box-shadow: 7px 7px 0px black;
-    -webkit-transform: translateX(-2px) translateY(-2px);
-    -moz-transform: translateX(-2px) translateY(-2px);
-    -ms-transform: translateX(-2px) translateY(-2px);
-    -o-transform: translateX(-2px) translateY(-2px);
-    transform: translateX(-2px) translateY(-2px); }
-    .project-thumb:hover .project-thumb-meta {
-      -webkit-transform: translateX(0) translateZ(0);
-      -moz-transform: translateX(0) translateZ(0);
-      -ms-transform: translateX(0) translateZ(0);
-      -o-transform: translateX(0) translateZ(0);
-      transform: translateX(0) translateZ(0);
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden; }
+.info-contain {
+  height: 100%;
+  background: #ff7d00;
+  padding: 1rem; }
+
+.info {
+  height: 100%; }
 
 @media screen and (min-width: 768px) {
-  .project-grid .wrapper {
-    padding: 2rem 2rem; }
+  .masthead-contain, .info-contain {
+    float: left;
+    width: 50%;
+    padding: 4rem; } }
+@media screen and (min-width: 1441px) {
+  .masthead-contain {
+    width: 66.666%; }
 
-  .project-grid-contain {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
-    -webkit-column-gap: 1rem;
-    -moz-column-gap: 1rem;
-    column-gap: 1rem; }
-
-  .project-thumb {
-    margin-bottom: 1.5rem; } }
-@media screen and (min-width: 1280px) {
-  .project-grid-contain {
-    -webkit-column-gap: 2rem;
-    -moz-column-gap: 2rem;
-    column-gap: 2rem; } }
-@media screen and (min-width: 1900px) {
-  .project-grid-contain {
-    -webkit-column-count: 4;
-    -moz-column-count: 4;
-    column-count: 4;
-    -webkit-column-gap: 1.5rem;
-    -moz-column-gap: 1.5rem;
-    column-gap: 1.5rem; } }
+  .info-contain {
+    width: 33.333%; } }

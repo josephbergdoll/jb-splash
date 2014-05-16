@@ -3,7 +3,10 @@ h1,h2,h3,h4,h5 {
 }
 
 h1 {
-
+  font-size: 1.1rem;
+  font-weight: $bold;
+  color: white;
+  @include aa-text;
 }
 
 h2 {
@@ -12,10 +15,31 @@ h2 {
   letter-spacing: 0.1em;
   margin: 0.75rem 0 0.25rem;
   font-size: 0.625rem;
-  color: $orange;
+  color: black;
 }
 
 h3 {
+}
+
+p {
+  color: $gray-lighter-opacity;
+  font-size: 1.5rem;
+}
+
+strong {
+}
+
+em {
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  @include transition($hover-speed color ease-out);
+  &:hover {
+    color: $gray-offwhite-opacity;
+    @include transition($fast-hover color ease-out);
+  }
 }
 
 // Animations

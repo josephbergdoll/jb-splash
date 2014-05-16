@@ -6,17 +6,15 @@
 @import "partials/_styleguide";
 @import "partials/_base";
 
-
-body {
-  background: url(../img/nyc.jpg) center center no-repeat;
-  background-size: cover;
-}
-
 // Structure
 
 header, section, footer {
   width: 100%;
   height: auto;
+}
+
+body {
+  @include clearfix;
 }
 
 .wrapper {
@@ -44,108 +42,61 @@ header, section, footer {
 
 // Header
 
-.header {
-  background: white;
-}
-
-.info-contain {
-  width: 100%;
+.masthead-contain {
   height: 100%;
-  background: transparent;
-  padding: 2rem;
-}
-
-.info {
-   background: $background;
-   height: 100%;
-   padding: 1rem;
+  background: url(https://farm8.staticflickr.com/7355/12736608893_4c8bb08abb_o.jpg) no-repeat center center;
+  background-size: cover;
+  padding:1rem;
 }
 
 .logo {
+  width: 100%;
+  height: auto;
   display: block;
-}
-
-// Project Grid
-
-.project-grid .wrapper {
-  padding: 1rem 0.5rem;
-  max-width: 100%;
-}
-
-.project-grid-contain {
-  @include column-count(2);
-  @include column-gap(0.5rem);
-  @include clearfix;
-}
-
-.project-thumb {
-  display: inline-block;
-  margin-bottom: 0.25rem;
-  overflow: hidden;
-  position: relative;
-  @include transform(translateZ(0));
-  @include backface-visibility(hidden);
-  box-shadow: 0px 0px 0px black;
-  @include transition($hover-speed all ease-out);
   img {
+    width: 100%;
+    height: auto;
+  }
+  &:after {
+    content:" ";
     display: block;
-    @include transform(translateZ(0));
-    @include backface-visibility(hidden);
+    width: 7.333%;
+    background: $orange;
+    height: 2px;
+    margin-bottom: 1.25%;
   }
-  .project-thumb-meta {
-    display: block;
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    @include transform(translateX(-110%));
-    @include transition($fast-hover all ease-out);
-    h2, h3 {
-      background: $gray-offwhite;
-      display: table;
-      padding: 0.25rem;
-    }
-  }
-  &:hover {
-    box-shadow: 7px 7px 0px black;
-    @include transform(translateX(-2px) translateY(-2px));
-    .project-thumb-meta {
-      @include transform(translateX(0) translateZ(0));
-      @include backface-visibility(hidden);
-    }
-  }
+}
+
+.logo-subhead {
+}
+
+.info-contain {
+  height: 100%;
+  background: $orange;
+  padding: 1rem;
+}
+
+.info {
+   height: 100%;
 }
 
 @media screen and (min-width: 768px) {
 
-.project-grid .wrapper {
-  padding: 2rem 2rem;
-}
-
-.project-grid-contain {
-  @include column-count(3);
-  @include column-gap(1rem);
-}
-
-.project-thumb {
-  margin-bottom: 1.5rem;
+.masthead-contain, .info-contain {
+  float: left;
+  width: 50%;
+  padding: 4rem;
 }
 
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1441px) {
 
-.project-grid-contain {
-  @include column-gap(2rem);
+.masthead-contain {
+  width: 66.666%;
 }
-
+.info-contain {
+  width: 33.333%;
 }
-
-@media screen and (min-width: 1900px) {
-
-.project-grid-contain {
-  @include column-count(4);
-  @include column-gap(1.5rem);
-}
-
 
 }
