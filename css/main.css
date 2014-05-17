@@ -297,6 +297,9 @@ body {
     height: 2px;
     margin-bottom: 1.25%; }
 
+.jb-logo-svg {
+  fill: white; }
+
 .info-contain {
   background: #ff7d00;
   padding: 1.25rem 1rem 0;
