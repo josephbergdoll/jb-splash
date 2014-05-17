@@ -5,7 +5,7 @@ h1,h2,h3,h4,h5 {
 h1 {
   font-size: 1.1rem;
   font-weight: $bold;
-  color: white;
+  color: black;
   @include aa-text;
 }
 
@@ -48,15 +48,3 @@ a {
 }
 
 // Animations
-
-@include keyframes(meta-animate) {
-  0% {
-    @include transform(translateY(0));
-  }
-  50% {
-    @include transform(translateX(4px) translateY(4px));
-  }
-  100% {
-    @include transform(translateX(0) translateY(0));
-  }
-}

@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5 {
 h1 {
   font-size: 1.1rem;
   font-weight: 700;
-  color: white;
+  color: black;
   -webkit-font-smoothing: antialiased; }
 
 h2 {
@@ -97,46 +97,6 @@ a {
     -webkit-transition: 100ms color ease-out;
     -moz-transition: 100ms color ease-out;
     transition: 100ms color ease-out; }
-
-@-webkit-keyframes meta-animate {
-  0% {
-    -webkit-transform: translateY(0); }
-
-  50% {
-    -webkit-transform: translateX(4px) translateY(4px); }
-
-  100% {
-    -webkit-transform: translateX(0) translateY(0); } }
-
-@-moz-keyframes meta-animate {
-  0% {
-    -moz-transform: translateY(0); }
-
-  50% {
-    -moz-transform: translateX(4px) translateY(4px); }
-
-  100% {
-    -moz-transform: translateX(0) translateY(0); } }
-
-@-o-keyframes meta-animate {
-  0% {
-    -o-transform: translateY(0); }
-
-  50% {
-    -o-transform: translateX(4px) translateY(4px); }
-
-  100% {
-    -o-transform: translateX(0) translateY(0); } }
-
-@keyframes meta-animate {
-  0% {
-    transform: translateY(0); }
-
-  50% {
-    transform: translateX(4px) translateY(4px); }
-
-  100% {
-    transform: translateX(0) translateY(0); } }
 
 body, html {
   margin: 0;
@@ -185,22 +145,13 @@ header, section, footer {
   height: auto; }
 
 body {
-  display: block; }
-  body::after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0; }
+  min-height: 100%; }
 
 .wrapper {
   display: block;
-  max-width: 87.5em;
-  margin-left: auto;
-  margin-right: auto;
   width: 100%;
-  padding: 3rem 2rem; }
+  min-height: 100%;
+  height: 100%; }
   .wrapper::after {
     visibility: hidden;
     display: block;
@@ -243,7 +194,7 @@ body {
 
 .masthead-contain {
   height: 100%;
-  background: url(https://farm4.staticflickr.com/3681/12736901784_99469b8dc8_h.jpg) no-repeat right center;
+  background: url(https://farm3.staticflickr.com/2910/14179024366_e49cce7a42_h.jpg) no-repeat right center;
   background-size: cover;
   padding: 1rem; }
 
@@ -263,26 +214,33 @@ body {
     margin-bottom: 1.25%; }
 
 .info-contain {
-  height: 100%;
   background: #ff7d00;
   padding: 1rem; }
 
 .info {
-  height: 100%;
   max-width: 37.5rem;
   position: relative; }
 
 .p-white-sm {
+  display: block;
   font-size: 0.65rem;
   margin: 0;
   letter-spacing: 0.1em;
   text-transform: uppercase; }
 
 @media screen and (min-width: 768px) {
+  body {
+    overflow-y: hidden; }
+
   .masthead-contain, .info-contain {
     float: left;
     width: 50%;
-    padding: 4rem; }
+    padding: 4rem;
+    min-height: 100%;
+    height: 100%; }
+
+  .info {
+    height: 100%; }
 
   .p-white-sm {
     position: absolute;
