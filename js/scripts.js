@@ -4,11 +4,15 @@ $(document).ready(function(){
 
 $(window).load(function(){
 
-  $('.mast-bg').delay(900).queue(function(){
+  $('.loader').delay(800).queue(function(){
+    $(this).addClass('loaded');
+  });
+
+  $('.mast-bg').delay(1500).queue(function(){
     $(this).addClass('show-bg');
   });
 
-  $('.info-contain').delay(1500).queue(function(){
+  $('.info-contain').delay(2000).queue(function(){
     $(this).addClass('show-info');
   });
 

@@ -26,3 +26,10 @@ $fast-hover: 100ms;
 $hover-speed: 250ms;
 $short-transition: 400ms;
 $long-transition: 800ms;
+
+// Animations
+
+@include keyframes(loader) {
+  0% { @include transform(); }
+  100% { @include transform(rotate(360deg)); }
+}

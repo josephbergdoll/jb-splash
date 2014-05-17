@@ -82,6 +82,34 @@ table {
   font-style: normal;
   font-weight: 900; }
 
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: none; }
+
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@-moz-keyframes loader {
+  0% {
+    -moz-transform: none; }
+
+  100% {
+    -moz-transform: rotate(360deg); } }
+
+@-o-keyframes loader {
+  0% {
+    -o-transform: none; }
+
+  100% {
+    -o-transform: rotate(360deg); } }
+
+@keyframes loader {
+  0% {
+    transform: none; }
+
+  100% {
+    transform: rotate(360deg); } }
+
 h1, h2, h3, h4, h5 {
   font-family: "sans", "Helvetica Neue", Arial, Helvetica, sans-serif; }
 
@@ -206,6 +234,28 @@ body {
   .block-fifth:last-child {
     margin-right: 0; }
 
+.loader {
+  width: 3rem;
+  height: 2px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: #ff7d00;
+  -webkit-animation: loader 5s linear infinite;
+  -moz-animation: loader 5s linear infinite;
+  animation: loader 5s linear infinite;
+  -webkit-transition: 250ms opacity ease-out;
+  -moz-transition: 250ms opacity ease-out;
+  transition: 250ms opacity ease-out; }
+
+.loaded {
+  opacity: 0; }
+
 .masthead-contain {
   padding: 0.75rem;
   height: 100%;
@@ -312,7 +362,8 @@ body {
     transform: translateX(0); }
 
   .mast-bg {
-    width: 50%; }
+    width: 50%;
+    background-size: cover; }
 
   .info {
     height: 100%; }
@@ -322,7 +373,7 @@ body {
     bottom: 0; } }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .mast-bg {
-    background: url(https://farm3.staticflickr.com/2910/14179024366_e49cce7a42_h.jpg) no-repeat 80% center; } }
+    background: url(https://farm3.staticflickr.com/2910/14179024366_e49cce7a42_h.jpg) no-repeat 80% bottom; } }
 @media screen and (min-width: 1024px) {
   p {
     font-size: 1.5rem;

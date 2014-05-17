@@ -42,7 +42,21 @@ body {
 }
 
 
-// Header
+.loader {
+  width: 3rem;
+  height: 2px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  @include transform(translateX(-50%) translateY(-50%));
+  background: $orange;
+  @include animation(loader 5s linear infinite);
+  @include transition($hover-speed opacity ease-out);
+}
+
+.loaded {
+  opacity: 0;
+}
 
 .masthead-contain {
   padding:0.75rem;
@@ -154,6 +168,7 @@ body {
 
 .mast-bg {
   width: 50%;
+  background-size: cover;
 }
 
 .info {
@@ -169,7 +184,7 @@ body {
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .mast-bg {
-    background: url(https://farm3.staticflickr.com/2910/14179024366_e49cce7a42_h.jpg) no-repeat 80% center;
+    background: url(https://farm3.staticflickr.com/2910/14179024366_e49cce7a42_h.jpg) no-repeat 80% bottom;
   }
 }
 
