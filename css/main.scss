@@ -44,7 +44,7 @@ body {
 
 .masthead-contain {
   height: 100%;
-  background: url(https://farm8.staticflickr.com/7355/12736608893_4c8bb08abb_o.jpg) no-repeat center center;
+  background: url(https://farm4.staticflickr.com/3681/12736901784_99469b8dc8_h.jpg) no-repeat right center;
   background-size: cover;
   padding:1rem;
 }
@@ -60,7 +60,7 @@ body {
   &:after {
     content:" ";
     display: block;
-    width: 7.333%;
+    width: 7%;
     background: $orange;
     height: 2px;
     margin-bottom: 1.25%;
@@ -78,6 +78,15 @@ body {
 
 .info {
    height: 100%;
+   max-width: 37.5rem;
+   position: relative;
+}
+
+.p-white-sm {
+  font-size: 0.65rem;
+  margin: 0;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 768px) {
@@ -88,15 +97,24 @@ body {
   padding: 4rem;
 }
 
+.p-white-sm {
+  position: absolute;
+  bottom: 0;
+}
+
 }
 
 @media screen and (min-width: 1441px) {
-
+/*
 .masthead-contain {
   width: 66.666%;
 }
 .info-contain {
   width: 33.333%;
+}*/
+
+.logo {
+  width: 75%;
 }
 
 }
