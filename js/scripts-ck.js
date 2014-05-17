@@ -1,1 +1,1 @@
-$(document).ready(function(){});$(window).load(function(){$(".info-contain").delay(1e3).queue(function(){$(this).addClass("show-info")})});
+$(document).ready(function(){});$(window).load(function(){$(".mast-bg").delay(600).queue(function(){$(this).addClass("show-bg")});$(".info-contain").delay(900).queue(function(){$(this).addClass("show-info")})});
