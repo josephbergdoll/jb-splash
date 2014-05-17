@@ -245,23 +245,23 @@ body {
 
 @media screen and (max-width: 767px) {
   .info-contain {
-    -webkit-transform: translateY(2%);
-    -moz-transform: translateY(2%);
-    -ms-transform: translateY(2%);
-    -o-transform: translateY(2%);
-    transform: translateY(2%);
-    -webkit-transition: 400ms -webkit-transform ease-out, 800ms opacity ease-out;
-    -moz-transition: 400ms -moz-transform ease-out, 800ms opacity ease-out;
-    -o-transition: 400ms -o-transform ease-out, 800ms opacity ease-out;
-    transition: 400ms transform ease-out, 800ms opacity ease-out;
+    width: 100%;
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+    -webkit-transition: 400ms all ease-out;
+    -moz-transition: 400ms all ease-out;
+    transition: 400ms all ease-out;
     opacity: 0; }
 
   .show-info {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    filter: blur(0px);
     opacity: 0.95; } }
 @media screen and (min-width: 768px) {
   .wrapper {
