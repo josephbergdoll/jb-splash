@@ -46,10 +46,10 @@ body {
   width: 3rem;
   height: 2px;
   position: fixed;
+  margin-left: -1.5rem;
   top: 50%;
   left: 50%;
-  @include transform(translateX(-50%) translateY(-50%));
-  background: $orange;
+  background: white;
   @include animation(loader 5s linear infinite);
   @include transition($hover-speed opacity ease-out);
 }
@@ -78,36 +78,39 @@ body {
 }
 
 .show-bg {
-  opacity: 1;
+  opacity: 0.75;
 }
 
 .masthead {
   position: relative;
   z-index: 1;
+  height: inherit;
 }
 
 
 
 .logo {
-  width: 100%;
-  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
-  img {
-    width: 100%;
-    height: auto;
-  }
-  &:after {
-    content:" ";
+  max-width: 20rem;
+  width: 75%;
+  svg {
     display: block;
-    width: 7%;
-    background: $orange;
-    height: 2px;
-    margin-bottom: 1.25%;
+    max-width: 100%;
   }
 }
 
+.logo-subhead {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 .info-contain {
-  background: $orange;
+  background: white;
   padding: 1.25rem 1rem 0;
   position: absolute;
   bottom: 0;
@@ -182,6 +185,12 @@ body {
 
 }
 
+@media screen and (min-width: 768px) {
+  .logo-subhead {
+    display: block;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .mast-bg {
     background: url(https://farm3.staticflickr.com/2910/14179024366_e49cce7a42_h.jpg) no-repeat 82% bottom;
@@ -191,8 +200,7 @@ body {
 
 @media screen and (min-width: 1024px) {
   p {
-    font-size: 1.5rem;
-    line-height: 1.22;
+    font-size: 1.125rem;
   }
 }
 

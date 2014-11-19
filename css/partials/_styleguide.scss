@@ -1,20 +1,18 @@
-h1,h2,h3,h4,h5 {
-  font-family: $sans;
-}
-
 h1 {
-  font-size: 1.1rem;
+  font-family: $sans;
+  font-size: 1rem;
   font-weight: $bold;
   color: black;
   @include aa-text;
 }
 
 h2 {
+  font-famly: $serif;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
   margin: 0 0 0.25rem;
-  font-size: 0.625rem;
+  font-size: 0.65rem;
   color: black;
   &:first-child {
     margin: 0 0 0.25rem;
@@ -25,10 +23,10 @@ h3 {
 }
 
 p {
-  color: $gray-lighter-opacity;
-  font-size: 1rem;
+  color: $gray-light;
+  font-size: 0.9375rem;
   line-height: 1.35;
-  margin: 0 0 1.2rem;
+  margin: 0 0 1.3rem;
 }
 
 
@@ -40,10 +38,10 @@ em {
 
 a {
   text-decoration: none;
-  color: white;
+  color: $gray-dark;
   @include transition($hover-speed color ease-out);
   &:hover {
-    color: $gray-offwhite-opacity;
+    color: black;
     @include transition($fast-hover color ease-out);
   }
 }
