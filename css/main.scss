@@ -49,7 +49,7 @@ body {
   margin-left: -1.5rem;
   top: 50%;
   left: 50%;
-  background: white;
+  background: black;
   @include animation(loader 5s linear infinite);
   @include transition($hover-speed opacity ease-out);
 }
