@@ -1,0 +1,71 @@
+#page-front {
+  padding-top: $wrapper-padding-small 0;
+  @include media($medium-only) {
+    padding: $wrapper-padding-medium 0;
+  }
+  @include media($large-up) {
+    padding: $wrapper-padding-large 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  section {
+    width: 100%;
+  }
+
+  .top {
+    margin-bottom: $line-x2;
+  }
+
+  .image-row {
+    flex-grow: 1;
+    position: relative;
+  }
+
+  .border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: rem(8);
+    background: $black;
+  }
+
+  .image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+  }
+
+  .js-halftone {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .bottom {
+    margin-top: $line-x4;
+  }
+
+  .bio {
+    p {
+      max-width: rem(290);
+    }
+    @include media($medium-up) {
+      margin-right: auto;
+    }
+  }
+
+  .contact-item {
+    &:not(:first-of-type) {
+      margin-top: $line-x1;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+/*
+Theme Name: JB Splash - 2017
+Description: A personal site for Joseph Bergdoll.
+Author: Extended Play
+Author URI: http://extendedplay.nyc
+Version: 1.0
+*/
+
+@import 'global/reset';
+@import 'bourbon';
+@import 'global/grid-settings';
+@import 'toddy';
+@import 'global/breakpoints';
+
+// Globals
+@import 'global/functions';
+@import 'global/fonts';
+@import 'global/variables';
+// @import 'global/animations';
+@import 'global/mixins';
+@import 'global/base';
+@import 'global/styleguide';
+@import 'global/forms';
+@import 'global/layout';
+@import 'global/utils';
+@import 'global/svg';
+
+// Templates
+@import 'templates/page-front';

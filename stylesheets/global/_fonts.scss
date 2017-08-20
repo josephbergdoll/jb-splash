@@ -1,0 +1,19 @@
+//Fonts
+@font-face {
+  @include font('icons', 'icons', 'normal', 'normal');
+}
+
+@font-face {
+  font-family: 'mast-grotesk';
+  @include font-url-woff('MaisonNeueWEB-Light');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'mast-grotesk';
+  @include font-url-woff('MaisonNeueWEB-Book');
+  font-weight: 500;
+  font-style: normal;
+}
+

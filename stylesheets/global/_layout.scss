@@ -1,0 +1,387 @@
+// Structure
+
+#page {
+  position: relative;
+  min-height: 100%;
+}
+
+.page-content {
+  width: 100%;
+  position: relative;
+
+  .first-load .home & {
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+.wrapper {
+  max-width: $maxwidth;
+  padding-left: $wrapper-padding-small;
+  padding-right: $wrapper-padding-small;
+  @include media($medium-only) {
+    padding-left: $wrapper-padding-medium;
+    padding-right: $wrapper-padding-medium;
+  }
+  @include media($large-up) {
+    padding-left: $wrapper-padding-large;
+    padding-right: $wrapper-padding-large;
+  }
+  @include media($xlarge-up) {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &.row-contain {
+    padding-left: $wrapper-padding-small - $half-gutter;
+    padding-right: $wrapper-padding-small - $half-gutter;
+    @include media($medium-only) {
+      padding-left: $wrapper-padding-medium - $half-gutter;
+      padding-right: $wrapper-padding-medium - $half-gutter;
+    }
+    @include media($large-up) {
+      padding-left: $wrapper-padding-large - $half-gutter;
+      // padding-left: 0;
+      padding-right: 0;
+      margin-right: -$half-gutter;
+    }
+    @include media($xxlarge-up) {
+    }
+  }
+  &.no-pad {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.divider {
+  @extend .wrapper;
+  &:after {
+    content: ' ';
+    display: block;
+    width: 100%;
+    border-top: $standard-border;
+  }
+  &.x1 {
+    margin-top: $line-x1;
+    margin-bottom: $line-x1;
+  }
+  &.x2 {
+    margin-top: $line-x2;
+    margin-bottom: $line-x2;
+  }
+  &.x3 {
+    margin-top: $line-x2;
+    margin-bottom: $line-x2;
+    @include media($medium-up) {
+      margin-top: $line-x3;
+      margin-bottom: $line-x3;
+    }
+  }
+  &.x4 {
+    margin-top: $line-x2;
+    margin-bottom: $line-x2;
+    @include media($medium-up) {
+      margin-top: $line-x4;
+      margin-bottom: $line-x4;
+    }
+  }
+
+}
+
+.wrapper .divider {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+.top-margin {
+  margin-top: $line-x1;
+  &.x2 {
+    margin-top: $line-x2;
+  }
+  &.x3 {
+    margin-top: $line-x2;
+    @include media($medium-up) {
+      margin-top: $line-x3;
+    }
+  }
+  &.x4 {
+    margin-top: $line-x2;
+    @include media($medium-up) {
+      margin-top: $line-x4;
+    }
+  }
+}
+
+.bottom-margin {
+  margin-bottom: $line-x1;
+  &.x2 {
+    margin-bottom: $line-x2;
+  }
+  &.x3 {
+    margin-bottom: $line-x2;
+    @include media($medium-up) {
+      margin-bottom: $line-x3;
+    }
+  }
+  &.x4 {
+    margin-bottom: $line-x2;
+    @include media($medium-up) {
+      margin-bottom: $line-x4;
+    }
+  }
+}
+
+.margins {
+  margin-top: $line-x1;
+  margin-bottom: $line-x1;
+  &.x2 {
+    margin-top: $line-x2;
+    margin-bottom: $line-x2;
+  }
+  &.x3 {
+    margin-top: $line-x2;
+    margin-bottom: $line-x2;
+    @include media($medium-up) {
+      margin-top: $line-x3;
+      margin-bottom: $line-x3;
+    }
+  }
+  &.x4 {
+    margin-top: $line-x2;
+    margin-bottom: $line-x2;
+    @include media($medium-up) {
+      margin-top: $line-x4;
+      margin-bottom: $line-x4;
+    }
+  }
+}
+
+.top-margin-gutter {
+  margin-top: $full-gutter;
+  &.half {
+    margin-top: $half-gutter;
+  }
+}
+
+.bottom-margin-gutter {
+  margin-bottom: $full-gutter;
+  &.half {
+    margin-bottom: $half-gutter;
+  }
+}
+
+.margins-gutter {
+  margin-top: $full-gutter;
+  margin-bottom: $full-gutter;
+  &.half {
+    margin-top: $half-gutter;
+    margin-bottom: $half-gutter;
+  }
+}
+
+.top-padding {
+  padding-top: $line-x1;
+  &.x2 {
+    padding-top: $line-x2;
+  }
+  &.x3 {
+    padding-top: $line-x2;
+    @include media($medium-up) {
+      padding-top: $line-x3;
+    }
+  }
+  &.x4 {
+    padding-top: $line-x2;
+    @include media($medium-up) {
+      padding-top: $line-x4;
+    }
+  }
+}
+
+.bottom-padding {
+  padding-bottom: $line-x1;
+  &.x2 {
+    padding-bottom: $line-x2;
+  }
+  &.x3 {
+    padding-bottom: $line-x2;
+    @include media($medium-up) {
+      padding-bottom: $line-x3;
+    }
+  }
+  &.x4 {
+    padding-bottom: $line-x2;
+    @include media($medium-up) {
+      padding-bottom: $line-x4;
+    }
+  }
+}
+
+.paddings {
+  padding-top: $line-x1;
+  padding-bottom: $line-x1;
+  &.x2 {
+    padding-top: $line-x2;
+    padding-bottom: $line-x2;
+  }
+  &.x3 {
+    padding-top: $line-x2;
+    padding-bottom: $line-x2;
+    @include media($medium-up) {
+      padding-top: $line-x3;
+      padding-bottom: $line-x3;
+    }
+  }
+  &.x4 {
+    padding-top: $line-x2;
+    padding-bottom: $line-x2;
+    @include media($medium-up) {
+      padding-top: $line-x4;
+      padding-bottom: $line-x4;
+    }
+  }
+}
+
+.top-padding-gutter {
+  padding-top: $full-gutter;
+  &.half {
+    padding-top: $half-gutter;
+  }
+}
+
+.bottom-padding-gutter {
+  padding-bottom: $full-gutter;
+  &.half {
+    padding-bottom: $half-gutter;
+  }
+}
+
+.paddings-gutter {
+  padding-top: $full-gutter;
+  padding-bottom: $full-gutter;
+  &.half {
+    padding-top: $half-gutter;
+    padding-bottom: $half-gutter;
+  }
+}
+
+.has-absolute {
+  position: relative;
+}
+
+[class*=" absolute-"] {
+  display: block;
+  position: absolute;
+}
+
+[class*="absolute-top-left"] {
+  top: 0;
+  left: 0;
+}
+
+[class*="absolute-top-right"] {
+  top: 0;
+  right: 0;
+}
+
+[class*="absolute-bottom-left"] {
+  bottom: 0;
+  left: 0;
+}
+
+[class*=" medium-absolute-"] {
+  @include media($medium-up) {
+    display: block;
+    position: absolute;
+  }
+}
+
+.mobile-header {
+  @include clearfix();
+  .headline {
+    float: left;
+    @include media($medium-up) {
+      float: none;
+    }
+  }
+  .all-link,
+  .text-link,
+  .text-link-wrap {
+    float: right;
+    @include media($medium-up) {
+      float: none;
+    }
+  }
+}
+
+.medium-mobile-header {
+  @include clearfix();
+  .headline {
+    @include media($medium-only) {
+      float: left;
+    }
+  }
+  .all-link,
+  .text-link,
+  .text-link-wrap {
+    @include media($medium-only) {
+      float: right;
+    }
+  }
+}
+
+.stretch-headline {
+  @include media($medium-up) {
+    display: flex;
+    flex-direction: column;
+  }
+  .headline {
+    @include media($medium-up) {
+      flex-grow: 1;
+    }
+  }
+  .headline + * {
+    @include media($medium-up) {
+      flex-shrink: 0;
+    }
+  }
+}
+
+.large-stretch-headline {
+  @include media($large-up) {
+    display: flex;
+    flex-direction: column;
+  }
+  .headline {
+    @include media($large-up) {
+      flex-grow: 1;
+    }
+  }
+  .headline + * {
+    @include media($large-up) {
+      flex-shrink: 0;
+    }
+  }
+}
+
+.small-only {
+  @include media($medium-up) {
+    display: none;
+  }
+}
+
+.medium-up {
+  display: none;
+  @include media($medium-up) {
+    display: block;
+  }
+}
+
+.large-up {
+  display: none;
+  @include media($medium-up) {
+    display: block;
+  }
+}

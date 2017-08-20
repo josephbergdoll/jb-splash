@@ -21,7 +21,6 @@
     <script src="{{site.baseUrl}}assets/js/jquery.min.js"></script>
     <script src="{{site.baseUrl}}assets/js/main.min.js"></script>
 
-
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0, minimal-ui">
 
     <!-- Normal Meta -->
@@ -39,6 +38,11 @@
 
   </head>
   <body>
-    {{ content }}
+    <div id="page">
+      <div class="page-content">
+        {{ content }}
+      </div>
+    </div>
+    
   </body>
 </html>

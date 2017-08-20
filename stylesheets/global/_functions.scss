@@ -1,0 +1,25 @@
+// Functions
+@function asset-url($filename) {
+  @return url('img/#{$filename}');
+}
+
+@function icon-url($filename) {
+  @return url('img/svg/#{$filename}');
+}
+
+@mixin font-url($fontname) {
+  src: url('fonts/#{$fontname}.eot');
+  src: url('fonts/#{$fontname}.eot?#iefix') format('embedded-opentype'),
+       url('fonts/#{$fontname}.woff') format('woff'), url('fonts/#{$fontname}.woff2') format('woff2');
+}
+
+@mixin font-url-woff($fontname) {
+  src: url('fonts/#{$fontname}.woff') format('woff'), url('fonts/#{$fontname}.woff2') format('woff2');
+}
+
+@mixin font($familyname, $fontname, $weight, $style) {
+  font-family: $familyname;
+  @include font-url($fontname);
+  font-weight: $weight;
+  font-style: $style;
+}

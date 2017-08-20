@@ -34,7 +34,6 @@
     "grunt-newer": "~1.1.1",
     "grunt-postcss": "^0.7.2",
     "grunt-preprocess": "^5.1.0",
-    "grunt-sass": "^2.0.0",
     "grunt-scss-lint": "0.3.8",
     "grunt-jekyll": "~0.4.2",
     "grunt-usemin": "3.1.1",

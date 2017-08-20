@@ -1,0 +1,24 @@
+// Width Breakpoints 
+
+$em-base: 16px !global;
+
+$width-small-max: 767px !default;
+
+$width-medium-min: 768px !default;
+$width-medium-max: 1023px !default;
+
+$width-large-min: 1024px !global;
+$width-large-max: 1349px !global;
+
+$width-xlarge-min: 1350px !global;
+$width-xlarge-max: 1799px !global;
+
+$width-xxlarge-min: 1800px !default;
+
+$fixed-gutter: true !global;
+$fixed-gutter-width: rem(32) !global;
+
+$small-column-count: 2 !global;
+$medium-column-count: 8 !global;
+
+$max-width: rem(1600) !global;

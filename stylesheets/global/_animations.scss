@@ -1,0 +1,45 @@
+// Animations
+
+@include keyframes(loader) {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% {opacity: 1; }
+}
+
+@include keyframes(fadeOut) {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@include keyframes(rotate) {
+  from { @include transform(rotate(0deg)); }
+  to { @include transform(rotate(360deg)); }
+}
+
+@include keyframes(scaleRotate) {
+  0% { @include transform(rotate(0deg) scale(1)); }
+  33% { @include transform(rotate(120deg) scale(3)); border-radius: 0; }
+  66% { @include transform(rotate(240deg) scale(0.75)); }
+  100% { @include transform(rotate(360deg) scale(1)); }
+}
+
+@include keyframes(pulse) {
+  0% { @include transform(scale(1.0)); }
+  50% { @include transform(scale(0.8)); }
+  100% { @include transform(scale(1)); }
+}
+
+@include keyframes(bounce) {
+  0% {@include transform(translateY(0)); }
+  80% {@include transform(translateY(0)); }
+  90% {@include transform(translateY(-50%));}
+  100% {@include transform(translateY(0));}
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% { 
+    opacity: 1;
+  }  20% { 
+    opacity: 0;
+  }
+}

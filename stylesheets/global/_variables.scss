@@ -1,0 +1,79 @@
+// Type Styles
+$font-head: 'mast-grotesk','Helvetica Neue', Arial, Helvetica, sans-serif;
+$font-text: 'mast-grotesk','Helvetica Neue', Arial, Helvetica, sans-serif;
+
+// Font Weights
+$type-black: 800;
+$type-bold: 700;
+$type-medium: 600;
+$type-book: 500;
+$type-light: 300;
+
+// Font Sizes
+$type-paragraph: rem(13);
+// $type-mid-sm: rem(19);
+// $type-mid: rem(24);
+// $type-large-sm: rem(30);
+// $type-large: rem(44);
+
+// Line Heights
+$line-global: rem(16);
+$line-x1: $line-global;
+$line-x1-5: $line-global * 1.5;
+$line-x2: $line-global * 2;
+$line-x3: $line-global * 3;
+$line-x4: $line-global * 4;
+
+// Tracking
+
+// Wrapper Paddings
+$wrapper-padding-small: $line-x1;
+$wrapper-padding-medium: $line-x2;
+$wrapper-padding-large: $line-x4;
+
+
+//Sizes
+
+$half-gutter: $fixed-gutter-width/2;
+$full-gutter: $fixed-gutter-width;
+
+// Colors
+$white: #fff;
+$black: #000;
+
+$red: #ff4e4e;
+
+$grey-border-solid: #eee;
+
+$light-grey: #bbbbbb;
+
+$text-light-grey: #9a9a9a;
+$text-dark-grey: #707070;
+
+$dark-black: #232323;
+
+
+$highlight: $black;
+
+$text-shadow: 0px 1px 10px rgba(0,0,0,0.35);
+
+
+// Borders
+$border-width: 1px;
+
+$border-transparent: $border-width solid transparent;
+$standard-border: $border-width solid $grey-border-solid;
+$dotted-border: $border-width dotted $grey-border-solid;
+
+$border-black: $border-width solid $black;
+$border-white: $border-width solid $white;
+
+// Speeds
+$page-transition: 400ms;
+$caption-transition: 200ms;
+$hover-in: 400ms;
+$hover-out: 500ms;
+$short-transition: 650ms;
+$mid-transition: 800ms;
+$long-transition: 1000ms;
+$longest-transition: 1500ms;

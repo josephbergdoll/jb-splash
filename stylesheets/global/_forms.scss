@@ -1,0 +1,178 @@
+// // Forms Styles
+
+// %form-reset {
+//   text-decoration: none;
+//   @include appearance(none);
+//   border: 0;
+//   border-radius: 0;
+//   background: transparent;
+//   outline: 0;
+// }
+
+// .text-select {
+//   @extend %form-reset;
+//   font-size: inherit;
+//   font-family: inherit;
+//   color: $text-dark-grey;
+//   cursor: pointer;
+//   &:hover {
+//     color: $black;
+//   }
+// }
+
+
+// %sg-button {
+//   @include resetbutton();
+//   color: $text-grey-paragraph;
+//   font-size: rem(20);
+//   background: $white;
+//   color: $light-black;
+//   transition: color $hover-out $ease-out-quart;
+//   &:disabled {
+//     color: $text-lighter-grey;
+//   }
+//   &:not(:disabled):hover {
+//     color: $black;
+//   }
+// }
+
+// label {
+//   @extend %sg-h5;
+//   span {
+//     &:before {
+//       content: '\2014\00a0'
+//     }
+//     color: $text-light-grey;
+//   }
+// }
+
+// %sg-button-cta {
+//   @extend %sg-button, %aa-text;
+//   font-family :$font-text;
+//   font-size: $type-paragraph;
+//   font-weight: $type-medium;
+//   display: block;
+//   width: 100%;
+//   padding: $line-x1;
+//   text-align: left;
+//   background: $mid-black;
+//   border: 0;
+//   color: $white;
+//   text-align: center;
+//   &:not(:disabled):hover {
+//     background: $black;
+//     color: $white;
+//   }
+//   &:disabled {
+//     background: $light-grey;
+//     color: $text-lighter-grey;
+//   }
+// }
+
+// %sg-input {
+//   @extend %form-reset;
+//   border: $border-mid-grey;
+//   background: $white;
+//   width: 100%;
+//   box-sizing: border-box;
+//   padding: $half-gutter * 0.5;
+//   transition: all $hover-out ease-out;
+//   color: $black;
+//   &:hover,
+//   &:focus {
+//     transition: all $hover-in ease-out;
+//     border-color: $text-light-grey;
+//   }
+// }
+
+// input[type='text'],
+// input[type='email'],
+// input[type='url'],
+// textarea {
+//   @extend %sg-input;
+//   @include sg-body-copy;
+//   &.wpcf7-not-valid {
+//     border-color: $red;
+//   }
+// }
+
+// [class^="button"],
+// button {
+//   @extend %sg-button !optional;
+// }
+
+// [class^="button-cta"],
+// input[type='submit'] {
+//   @extend %sg-button-cta !optional;
+// }
+
+//  [class*="button-hollow"] {
+//   background: transparent;
+//   border: $border-dark-grey;
+//   color: $mid-black;
+//   &:hover {
+//     border: $border-black;
+//     color: $black;
+//   }
+//   &[class*="-dark"] {
+//     color: $white;
+//     border: $border-text-dark-grey;
+//     &:hover {
+//       border: $border-white;
+//     }
+//   }
+// }
+
+// .wpcf7-form  {
+//   br {
+//     display: none;
+//   }
+// }
+
+// .error,
+// .wpcf7-not-valid-tip {
+//   @extend %sg-h6;
+//   display: block;
+//   color: $red;
+//   padding-top: $line-x1/4;
+//   padding-bottom: $line-x1/4;
+// }
+
+// .wpcf7-form-control-wrap {
+//   display: block;
+//   margin-top: $line-x1/4;
+//   margin-bottom: $line-x1;
+// }
+
+// .screen-reader-response {
+//   position: absolute;
+//   overflow: hidden;
+//   clip: rect(1px, 1px, 1px, 1px);
+//   height: 1px;
+//   width: 1px;
+//   margin: 0;
+//   padding: 0;
+//   border: 0;
+// }
+
+// .wpcf7-response-output {
+//   margin-top: $line-x1;
+//   @extend %sg-h4;
+//   background: $white;
+//   padding: $line-x1;
+// }
+
+// .wpcf7-validation-errors,
+// .wpcf7-spam-blocked,
+// .wpcf7-mail-sent-ng {
+//   background: $light-grey;
+// }
+
+// .wpcf7-display-none {
+//   display: none;
+// }
+
+// .wpcf7-mail-sent-ok {
+//   background: $dark-black;
+//   color: $white;
+// }

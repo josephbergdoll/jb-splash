@@ -121,16 +121,9 @@ module.exports = (grunt) ->
       dist:
         src: [
           'scripts/modernizr.js'
-          'scripts/plugins/theme-breakpoints.js'
-          'scripts/plugins/lazysizes-config.js'
-          'scripts/plugins/history.js'
-          'scripts/plugins/ajaxify.js'
           'scripts/plugins/bower.js'
-          'scripts/plugins/ls.bgset.min.js'
-          'scripts/plugins/packery.2.1.1.js'
-          'scripts/plugins/ep-googlemap.js'
-          'scripts/plugins/ep-scrollupheader.js'
-          'scripts/plugins/plyr-controls.js'
+          'scripts/plugins/theme-breakpoints.js'
+          'scripts/plugins/breathing-halftone.js'
           'scripts/modules/*.js'
           'scripts/scripts.js'
         ]
@@ -191,9 +184,6 @@ module.exports = (grunt) ->
         logConnections: true
         logFileChanges: true
         notify: false
-        ui: false
-        scriptPath: (path) ->
-          'localhost:2400' + path
   matchdep.filterDev('grunt-*').forEach grunt.loadNpmTasks
   grunt.registerTask 'css', [
     'sass'
