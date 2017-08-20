@@ -3,11 +3,11 @@ layout: default
 ---
 
 {% assign myName = site.title | split: ' ' %}
-<div id="page-front">
+<div id="page-front" class="first-load">
   <section class="top wrapper">
       <div class="flex-row">
         <div class="title-wrap small-2 medium-6 medium-offset-2 flex-columns">
-          <h1 class="js-title info-item">
+          <h1 class="title info-item">
             {{ myName[0] }}
             <br>
             {{ myName[1] }}
@@ -42,7 +42,9 @@ layout: default
     </div>
     
   </section>
-
+  
+  <div class="mobile-bg">
+  </div>
   <div class="images">
     <div class="image js-image"></div>
     <div class="image-hover hover-1-wrap">

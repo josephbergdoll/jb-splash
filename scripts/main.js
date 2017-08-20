@@ -7269,15 +7269,16 @@ var
   $window.on('load', function() {
     var
       $imageHovers = $('.image-hover'),
-      $infoItems = $('.info-item:not(.js-title)');
+      $infoItems = $('.info-item:not(.title)');
+    if (isMediumUp.matches) {
+      $infoItems.each(function(index) {
+        $(this).velocity({opacity: 1}, {duration: 2500, easing: 'easeInOutQuint', delay: 800 * index, queue: false});
+      });
 
-    $infoItems.each(function(index) {
-      $(this).velocity({opacity: 1}, {duration: 2500, easing: 'easeInOutQuint', delay: 800 * index, queue: false});
-    });
-
-    $imageHovers.delay(1250).each(function(index) {
-      $(this).velocity({scaleX: [1, 0.25 * index], scaleY: [1, 0.125*index], opacity:[1,0]}, {duration: 1250, easing: 'easeInOutQuint', delay: 100 * index, display: 'block', queue: false});
-    });
+      $imageHovers.delay(1250).each(function(index) {
+        $(this).velocity({scaleX: [1, 0.25 * index], scaleY: [1, 0.125*index], opacity:[1,0]}, {duration: 1250, easing: 'easeInOutQuint', delay: 100 * index, display: 'block', queue: false});
+      });
+    }
   });
 
   $document.ready(function() {
