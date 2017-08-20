@@ -16,6 +16,16 @@
   to { @include transform(rotate(360deg)); }
 }
 
+@include keyframes(shiftX) {
+  from { @include transform(translateX(-5%));}
+  to { @include transform(translateX(5%));}
+}
+
+@include keyframes(shiftY) {
+  from { @include transform(translateY(-5%));}
+  to { @include transform(translateY(5%));}
+}
+
 @include keyframes(scaleRotate) {
   0% { @include transform(rotate(0deg) scale(1)); }
   33% { @include transform(rotate(120deg) scale(3)); border-radius: 0; }
@@ -25,7 +35,7 @@
 
 @include keyframes(pulse) {
   0% { @include transform(scale(1.0)); }
-  50% { @include transform(scale(0.8)); }
+  50% { @include transform(scale(0.9)); }
   100% { @include transform(scale(1)); }
 }
 

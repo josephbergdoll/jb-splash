@@ -95,6 +95,7 @@
     padding-bottom: 25%;
     border-radius: 100%;
     overflow: hidden;
+    animation: shiftX 8s infinite ease-in-out alternate;
   }
 
   .hover-3-wrap {
@@ -106,6 +107,7 @@
     padding-bottom: 10%;
     border-radius: 100%;
     overflow: hidden;
+    animation: shiftY 4s infinite ease-in-out alternate;
   }
 
   .hover-4-wrap {
@@ -116,6 +118,7 @@
     padding-bottom: 40%;
     border-radius: 40vw;
     overflow: hidden;
+    animation: shiftY 20s infinite ease-in-out alternate;
   }
 
   .hover-5-wrap {
@@ -126,6 +129,7 @@
     padding-bottom: 5%;
     border-radius: 100%;
     overflow: hidden;
+    animation: pulse 5s infinite linear alternate;
   }
 
   .bottom {
