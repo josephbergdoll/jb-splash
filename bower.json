@@ -1,0 +1,31 @@
+{
+  "name": "jb-splash",
+  "description": "A personal splash site.",
+  "main": "index.js",
+  "authors": [
+    "Extended Play"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/josephbergdoll/mast-2017",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "velocity": "^1.5.0",
+    "respimage": "^1.4.2",
+    "matchMedia": "^0.3.0",
+    "flexibility": "^2.0.1",
+    "bourbon": "^4.3.4",
+    "nprogress": "^0.2.0",
+    "toddy": "^1.0.2"
+  },
+  "devDependencies": {
+    "easy-richmarker": "^0.0.1"
+  }
+}

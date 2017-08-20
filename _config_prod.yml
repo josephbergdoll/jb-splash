@@ -1,0 +1,12 @@
+# Build settings
+markdown: kramdown
+source: .
+destination: ./_prod
+layouts_dir: ./_layouts
+includes_dir: ./_includes
+
+gems:
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
