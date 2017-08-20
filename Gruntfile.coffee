@@ -221,7 +221,6 @@ module.exports = (grunt) ->
     'bower_concat'
     'concat'
     'uglify'
-    'preprocess:build'
   ]
   # Production task: `grunt prod`
   grunt.registerTask 'production', prodTasks

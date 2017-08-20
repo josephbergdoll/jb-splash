@@ -1,4 +1,5 @@
 # Build settings
+url: http://www.osephj.com
 markdown: kramdown
 source: .
 destination: ./_prod
