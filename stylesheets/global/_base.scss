@@ -28,6 +28,7 @@ body {
   color: $black;
   transition: background-color $short-transition ease-out;
   line-height: $line-global;
+  color: $text-light-grey;
 }
 
 ::selection {

@@ -115,7 +115,16 @@ module.exports = (grunt) ->
             '_prod/assets/js'
           else
             '_site/assets/js/'
-        ftiler: 'isFile'
+        filter: 'isFile'
+      fonts:
+        expand: true
+        src: ['fonts/*']
+        dest:
+          if IS_PRODUCTION == true
+            '_prod/assets/'
+          else
+            '_site/assets/'
+        filter: 'isFile'
     concat:
       options: separator: ';\n'
       dist:

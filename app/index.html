@@ -4,50 +4,62 @@ layout: default
 
 {% assign myName = site.title | split: ' ' %}
 <div id="page-front">
-    <section class="top wrapper">
-        <div class="flex-row">
-          <div class="title-wrap small-2 medium-6 medium-offset-2 flex-columns">
-            <h1 class="js-title">
-              {{ myName[0] }}
-              <br>
-              {{ myName[1] }}
-            </h1>
-          </div>
+  <section class="top wrapper">
+      <div class="flex-row">
+        <div class="title-wrap small-2 medium-6 medium-offset-2 flex-columns">
+          <h1 class="js-title info-item">
+            {{ myName[0] }}
+            <br>
+            {{ myName[1] }}
+          </h1>
         </div>
-      
-    </section>
-    <section class="image-row">
-      <div class="border"></div>
-      <div class="image js-image">
-        <img class="js-halftone" src="#" data-src="images/headshot_color.jpg">
       </div>
-    </section>
-    <section class="bottom wrapper">
-      <div class="flex-row flex-rtl-medium">
-        <article class="bio small-2 medium-4 medium-offset-1 flex-columns">
-          <p>
-            {{ site.data.index.bio }}
-            <br>
-            <a href="{{ site.workUrl }}" target="new" class="work-link">
-              View Work
-              <span class="inline-block link-arrow">
-                {% include corner-arrow.svg %}
-              </a>
-          </p>
-        </article>
-        <aside class="contact small-2 medium-1 flex-columns">
-          {% for item in site.data.index.contact %}
-          <div class="contact-item">
-            {{ item | capitalize }} &mdash;
-            <br>
-            <a href="https://www.twitter.com/{{site[item]}}" target="new">
-              {% if item != 'email' %}@{% endif %}{{site[item]}}
+  </section>
+
+  <section class="bottom wrapper">
+    <div class="flex-row flex-rtl-medium">
+      <article class="bio info-item small-2 medium-4 medium-offset-1 flex-columns">
+        <p>
+          {{ site.data.index.bio }}
+          <br>
+          <a href="{{ site.workUrl }}" target="new" class="text-link work-link">
+            View Work
+            <span class="inline-block link-arrow">
+              {% include corner-arrow.svg %}
             </a>
-          </div>
-          {% endfor %}
-        </aside>
-      </div>
-      
-    </section>
+        </p>
+      </article>
+      <aside class="contact small-2 medium-1 flex-columns">
+        {% for item in site.data.index.contact %}
+        <div class="contact-item info-item">
+          <h6>{{ item | capitalize }} &mdash;</h6>
+          <a class="text-link" href="https://www.twitter.com/{{site[item]}}" target="new">
+            {% if item != 'email' %}@{% endif %}{{site[item]}}
+          </a>
+        </div>
+        {% endfor %}
+      </aside>
+    </div>
+    
+  </section>
+
+  <div class="images">
+    <div class="image js-image"></div>
+    <div class="image-hover hover-1-wrap">
+      <div class="image-hover-1"></div>
+    </div>
+    <div class="image-hover hover-2-wrap">
+      <div class="image-hover-2"></div>
+    </div>
+    <div class="image-hover hover-3-wrap">
+      <div class="image-hover-3"></div>
+    </div>
+    <div class="image-hover hover-4-wrap">
+      <div class="image-hover-4"></div>
+    </div>
+    <div class="image-hover hover-5-wrap">
+      <div class="image-hover-5"></div>
+    </div>
+  </div>
 
 </div>

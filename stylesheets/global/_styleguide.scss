@@ -111,24 +111,31 @@ a {
 }
 
 @mixin sg-h1 {
+  font-weight: $type-medium;
 }
 
 @mixin sg-h2 {
+  font-weight: $type-medium;
 }
 
 @mixin sg-h3 {
+  font-weight: $type-medium;
 }
 
 @mixin sg-h4 {
+  font-weight: $type-medium;
 }
 
 @mixin sg-h5 {
+  font-weight: $type-medium;
 }
 
 @mixin sg-h6 {
+  font-weight: $type-medium;
 }
 
 @mixin sg-body-copy {
+  font-weight: $type-medium;
 }
 
 %sg-body-copy {
@@ -145,19 +152,19 @@ a {
 @mixin sg-body-link {
 }
 
-%sg-body-link {
-  @include sg-body-link;
-}
-
-// body-link is for links used within copy blocks. text-link is used for non-button links all alone in the design.
-
 @mixin sg-text-link {
-  color: $black;
-  font-weight: $type-book;
+  color: $text-light-grey;
+  font-weight: $type-medium;
   line-height: inherit;
   transition: color $hover-out $ease-out-cubic;
   display: inline-block;
 }
+
+%sg-body-link {
+  @include sg-text-link;
+}
+
+// body-link is for links used within copy blocks. text-link is used for non-button links all alone in the design.
 
 @mixin sg-text-cta {
   color: $highlight;
@@ -211,10 +218,11 @@ a[class*="text-link"] {
   }
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6, p {
   a:hover {
     color: $black;
   }
+  @include aa-text();
 }
 
 %sg-h1, h1, .h1 {
@@ -248,7 +256,7 @@ p {
     margin-top: $line-x2;
   }
   a {
-    @include sg-body-link;
+    @include sg-text-link;
   }
   &.p-large {
     @include sg-body-copy-lg;
