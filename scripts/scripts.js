@@ -15,7 +15,7 @@ var
       });
 
       $imageHovers.delay(1250).each(function(index) {
-        $(this).velocity({scaleX: [1, 0.25 * index], scaleY: [1, 0.125*index], opacity:[1,0]}, {duration: 1250, easing: 'easeInOutQuint', delay: 100 * index, display: 'block', queue: false});
+        $(this).velocity({opacity:[1,0]}, {duration: 1250, easing: 'easeInOutQuint', delay: 100 * index, display: 'block', queue: false});
       });
     }
   });

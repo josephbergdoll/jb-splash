@@ -1034,7 +1034,7 @@ body, html { margin: 0; padding: 0; }
 html { width: 100%; -webkit-text-size-adjust: 100%; font-size: 16px; margin-top: 0; }
 @media screen and (min-width: 1800px) { html { font-size: 18px; } }
 
-body { width: 100%; height: 100%; -webkit-tap-highlight-color: black; font-family: "jb-grotesk", "Helvetica Neue", Arial, Helvetica, sans-serif; font-size: 0.8125rem; font-weight: 400; background-color: #fff; color: #000; transition: background-color 650ms ease-out; line-height: 1rem; color: #707070; }
+body { width: 100%; height: 100%; -webkit-tap-highlight-color: black; font-family: "jb-grotesk", "Helvetica Neue", Arial, Helvetica, sans-serif; font-size: 0.875rem; font-weight: 400; background-color: #fff; color: #000; transition: background-color 650ms ease-out; line-height: 1rem; color: #707070; }
 
 ::selection { background: #bbbbbb; color: #232323; }
 
@@ -1367,14 +1367,16 @@ hr { height: 1px; border: 0; border-bottom: 1px solid #eee; display: block; }
 @media screen and (min-width: 1024px) { #page-front { padding: 4rem 0; } }
 #page-front section { width: 100%; }
 #page-front .top { margin-bottom: 2rem; }
-#page-front .image-row { flex-grow: 1; position: relative; overflow: hidden; width: 100%; }
+#page-front .title { color: #000; }
 #page-front .mobile-bg { background-image: url("/images/mobile-bg.png"); background-position: center center; background-size: cover; position: fixed; z-index: -1; top: 0; left: 0; width: 100%; height: 100%; }
 @media screen and (min-width: 768px) { #page-front .mobile-bg { display: none; } }
-#page-front .images { position: fixed; z-index: -1; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.35; display: none; }
+#page-front .images { position: fixed; z-index: -1; top: 0; left: 0; width: 100%; height: 100%; opacity: 1; display: none; }
 @media screen and (min-width: 768px) { #page-front .images { display: block; } }
 #page-front .hover-1-wrap { position: absolute; top: 0; left: 0; width: 50%; height: 100%; border-top-right-radius: 100vh; border-bottom-right-radius: 100vh; overflow: hidden; transform-origin: bottom left; }
 #page-front .image-hover-1, #page-front .image-hover-2, #page-front .image-hover-3, #page-front .image-hover-4, #page-front .image-hover-5 { background-image: url("/images/border-tall.png"); background-repeat: repeat; position: absolute; width: 100%; height: 1000%; top: -250; left: 0; }
-#page-front .image-hover-2, #page-front .image-hover-3 { background-image: url("/images/border-shorter.png"); }
+#page-front .image-hover-2, #page-front .image-hover-5 { background-image: url("/images/border-shorter-red.png"); }
+#page-front .image-hover-3 { background-image: url("/images/border-shorter.png"); }
+#page-front .image-hover-4 { background-image: url("/images/border-tall-red.png"); }
 #page-front .hover-2-wrap { position: absolute; width: 25%; top: 10%; left: 30%; height: 0; padding-bottom: 25%; border-radius: 100%; overflow: hidden; animation: shiftX 8s infinite ease-in-out alternate; }
 #page-front .hover-3-wrap { position: absolute; right: 35%; bottom: 20vw; height: 0; width: 10%; padding-bottom: 10%; border-radius: 100%; overflow: hidden; animation: shiftY 4s infinite ease-in-out alternate; }
 #page-front .hover-4-wrap { position: absolute; bottom: -10%; right: 0; width: 40%; padding-bottom: 40%; border-radius: 40vw; overflow: hidden; animation: shiftY 20s infinite ease-in-out alternate; }
@@ -1386,7 +1388,6 @@ hr { height: 1px; border: 0; border-bottom: 1px solid #eee; display: block; }
 #page-front .work-link g { stroke: #555555; transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1); }
 #page-front .work-link:hover g { stroke: #000; transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1); }
 #page-front .contact-item { position: relative; }
-@media screen and (max-width: 767px) { #page-front .contact-item:first-of-type { margin-top: 2rem; border-top: 1px solid #eee; padding-top: 2rem; } }
 #page-front .contact-item:not(:first-of-type) { margin-top: 1rem; }
 @media screen and (min-width: 768px) { #page-front .contact-item { opacity: 0; } }
 @media screen and (min-width: 768px) { #page-front.first-load .image-hover { display: none; } }
