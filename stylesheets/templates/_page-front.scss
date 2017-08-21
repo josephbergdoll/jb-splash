@@ -18,9 +18,9 @@
     margin-bottom: $line-x2;
   }
 
-  .title {
-    color: $black;
-  }
+  // .title {
+  //   color: $black;
+  // }
 
   .mobile-bg {
     background-image: url('/images/mobile-bg.png');
@@ -152,10 +152,10 @@
 
   .work-link {
     &:not(:hover) {
-      color: $text-dark-grey;
+      color: $text-light-grey;
     }
     g {
-      stroke: $text-dark-grey;
+      stroke: $text-light-grey;
       transition: all $hover-out $ease-out-quart;
     }
     &:hover {

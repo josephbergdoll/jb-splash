@@ -25,10 +25,9 @@ body {
   font-size: $type-paragraph;
   font-weight: $type-book;
   background-color: $body-bg-color;
-  color: $black;
+  color: $red;
   transition: background-color $short-transition ease-out;
   line-height: $line-global;
-  color: $text-light-grey;
 }
 
 ::selection {
