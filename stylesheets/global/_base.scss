@@ -15,8 +15,6 @@ html {
   }
 }
 
-$body-bg-color: $white;
-
 body {
   width: 100%;
   height: 100%;
@@ -24,10 +22,10 @@ body {
   font-family :$font-text;
   font-size: $type-paragraph;
   font-weight: $type-book;
-  background-color: $body-bg-color;
-  color: $red;
+  background-color: $bg-color;
   transition: background-color $short-transition ease-out;
   line-height: $line-global;
+  color: $text-color;
 }
 
 ::selection {
@@ -71,6 +69,7 @@ strong {
 
 em {
   font-style: italic;
+  line-height: inherit;
 }
 
 a {

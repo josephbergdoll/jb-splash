@@ -9,107 +9,6 @@ a {
   }
 }
 
-%underline-black,
-.underline-black {
-  background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($black,$black);
-  background-repeat: no-repeat,no-repeat,repeat-x;
-  background-size: .05em 1px,.05em 1px,1px 1px;
-  background-position: 0 98%,100% 98%,0 98%;
-  text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
-}
-
-.hover-underline {
-  @include media($large-up) {
-    text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
-    position: relative;
-  }
-  &:before {
-    @include media($large-up) {
-      content: '';
-    }
-    display: block;
-    position: absolute;
-    width: 0;
-    top: 0;
-    left: 0;
-    bottom: -$border-width;
-    transition: width $hover-out $ease-out-quart;
-    @extend %underline-black;
-    z-index: -1;
-  }
-  &:hover {
-    @include media($large-up) {
-      &:before {
-        width: 100%;
-        transition: width $hover-in $ease-out-quart;
-      }
-    }
-  }
-}
-
-.hover-underline-span {
-  .underline {
-    @include media($large-up) {
-      text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
-      position: relative;
-    }
-    &:before {
-      @include media($large-up) {
-        content: '';
-      }
-      display: block;
-      position: absolute;
-      width: 0;
-      top: 0;
-      left: 0;
-      bottom: -$border-width;
-      transition: width $hover-out $ease-out-quart;
-      @extend %underline-black;
-      z-index: -1;
-    }
-  }
-  &:hover .underline {
-    @include media($large-up) {
-      &:before {
-        width: 99%;
-        transition: width $hover-in $ease-out-quart;
-      }
-    }
-  }
-}
-
-
-
-.hover-underline-after {
-  @include media($large-up) {
-    text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
-    position: relative;
-  }
-  &:after {
-    @include media($large-up) {
-      content: '';
-    }
-    display: block;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    bottom: $border-width;
-    transition: all $hover-out $ease-out-quart;
-    opacity: 0;
-    @extend %underline-black;
-    z-index: -1;
-  }
-  &:hover {
-    @include media($large-up) {
-      &:after {
-        opacity: 1;
-        transition: all $hover-in $ease-out-quart;
-      }
-    }
-  }
-}
-
 @mixin sg-h1 {
   font-weight: $type-medium;
 }
@@ -153,11 +52,16 @@ a {
 }
 
 @mixin sg-text-link {
-  color: $red;
+  color: $accent-color;
+  border-bottom: 1px solid currentColor;
   font-weight: $type-medium;
   line-height: inherit;
-  transition: color $hover-out $ease-out-cubic;
+  transition: all $hover-out $ease-out-cubic;
   display: inline-block;
+  &:hover {
+    color: $text-color;
+    border-bottom: 1px solid transparent;
+  }
 }
 
 %sg-body-link {
@@ -176,53 +80,9 @@ a {
   }
 }
 
+a,
 [class*="text-link"] {
   @include sg-text-link();
-}
-
-a[class*="text-link"] {
-  @extend %no-aa-text;
-
-  &:not(.underline-span) {
-    &:not(.text-link-back) {
-      @extend .hover-underline;
-      &:before {
-        z-index: 0;
-      }
-    }
-
-    &.text-link-back {
-      @extend .hover-underline-after;
-      &:after {
-        z-index: 0;
-      }
-    }
-  }
-
-  &.underline-span {
-    @extend .hover-underline-span;
-    .underline {
-      &:before {
-        z-index: 0;
-      }
-    }
-  }
-
-  &:hover {
-    color: $black;
-    transition: color $hover-in $ease-out-cubic;
-  }
-
-  &:active {
-    color: $highlight;
-  }
-}
-
-h1,h2,h3,h4,h5,h6, p {
-  a:hover {
-    color: $black;
-  }
-  @include aa-text();
 }
 
 %sg-h1, h1, .h1 {
@@ -253,7 +113,7 @@ p {
   @include sg-body-copy;
   // max-width: 40em;
   &:not(:first-of-type) {
-    margin-top: $line-x2;
+    margin-top: $line-x1;
   }
   a {
     @include sg-text-link;
